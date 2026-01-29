@@ -10,12 +10,12 @@ const steps = [
 
 export const DemoFlow: React.FC = () => {
   return (
-    <div className="py-12 bg-white overflow-hidden">
+    <div className="py-4 bg-white overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 relative">
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-16 text-center">How the Home Demo Works</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-8 text-center">How the Home Demo Works</h2>
         
         {/* Mobile View: Vertical List */}
-        <div className="md:hidden space-y-8 relative pl-4">
+        <div className="md:hidden space-y-6 relative pl-4">
            {/* Vertical Line */}
            <div className="absolute left-[2.5rem] top-4 bottom-4 w-0.5 bg-blue-100 -z-10"></div>
            
@@ -33,7 +33,7 @@ export const DemoFlow: React.FC = () => {
         </div>
 
         {/* Desktop View: Pentagon Layout */}
-        <div className="hidden md:block relative w-[600px] h-[480px] mx-auto">
+        <div className="hidden md:block relative w-[600px] h-[480px] mx-auto scale-90 origin-top">
              {/* SVG Connecting Lines (Arrows) */}
              <svg className="absolute inset-0 w-full h-full -z-10 pointer-events-none overflow-visible" viewBox="0 0 600 480">
                <defs>
@@ -78,17 +78,17 @@ export const DemoFlow: React.FC = () => {
                         transform: 'translate(-50%, 0)'
                     }}
                  >
-                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-3 transition-transform hover:scale-110">
+                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-2 transition-transform hover:scale-110">
                         {step.id}
                    </div>
-                   <h4 className="font-bold text-slate-900 text-center text-lg leading-tight">{step.title}</h4>
-                   <p className="text-sm text-slate-500 text-center mt-1">{step.desc}</p>
+                   <h4 className="font-bold text-slate-900 text-center text-base leading-tight">{step.title}</h4>
+                   <p className="text-xs text-slate-500 text-center mt-1">{step.desc}</p>
                  </div>
              ))}
         </div>
         
-        <div className="mt-8 text-center">
-           <p className="text-lg font-medium text-slate-700 italic">"A safer way to turn curiosity into understanding."</p>
+        <div className="mt-4 text-center">
+           <p className="text-base font-medium text-slate-700 italic">"A safer way to turn curiosity into understanding."</p>
         </div>
       </div>
     </div>
