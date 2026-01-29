@@ -11,15 +11,15 @@ const USPItem: React.FC<USPItemProps> = ({ icon, title, colorClass }) => (
     <div className={`w-12 h-12 flex-shrink-0 ${colorClass} rounded-xl flex items-center justify-center shadow-sm`}>
       {icon}
     </div>
-    <h3 className="text-base font-bold text-slate-900 leading-tight">{title}</h3>
+    <h3 className="text-base font-bold text-slate-900 leading-tight text-left">{title}</h3>
   </div>
 );
 
 export const USPSection: React.FC = () => {
   return (
     <div className="py-6">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6">Why Parents Choose Pi Tab</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">Why Parents Choose Pi Tab</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
             <USPItem 
                 colorClass="bg-[#ef4444] text-white"
                 icon={

@@ -62,29 +62,21 @@ function App() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        {/* Top Section: Hero + Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16 lg:mb-24">
           
-          {/* Left Column (Content) */}
-          <div className="lg:col-span-7 space-y-12 lg:space-y-16">
+          {/* Left Column (Hero) */}
+          <div className="lg:col-span-7 space-y-8">
             <Hero />
             
-            {/* Mobile Form: Visible only on mobile, placed between Hero and USPs for high conversion */}
+            {/* Mobile Form: Visible only on mobile */}
             <div id="mobile-form" className="block lg:hidden scroll-mt-24">
                <LeadForm onSuccess={handleSuccess} className="bg-slate-50 border-slate-200 shadow-lg" />
             </div>
-
-            <USPSection />
-            <DemoFlow />
-            
-            {/* Footer-ish area inside content */}
-            <div className="pt-8 border-t border-slate-100 text-sm text-slate-500">
-               <p>&copy; {new Date().getFullYear()} Pi Tab + CuriousJr. All rights reserved.</p>
-               <p className="mt-2 hover:text-slate-800 cursor-pointer">Privacy Policy • Terms of Service</p>
-            </div>
           </div>
 
-          {/* Right Column (Sticky Form) - Desktop Only */}
-          <div className="hidden lg:block lg:col-span-5 lg:sticky lg:top-24">
+          {/* Right Column (Form + Testimonial) - Desktop Only */}
+          <div className="hidden lg:block lg:col-span-5">
             <LeadForm onSuccess={handleSuccess} />
             
             {/* Additional desktop-only trust signals below form */}
@@ -107,8 +99,20 @@ function App() {
               </div>
             </div>
           </div>
-
         </div>
+
+        {/* Bottom Section: USPs, Demo Flow, Footer - Centered Layout */}
+        <div className="max-w-5xl mx-auto space-y-16 lg:space-y-24">
+          <USPSection />
+          <DemoFlow />
+          
+          {/* Footer Area */}
+          <div className="pt-8 border-t border-slate-100 text-sm text-slate-500 text-center">
+             <p>&copy; {new Date().getFullYear()} Pi Tab + CuriousJr. All rights reserved.</p>
+             <p className="mt-2 hover:text-slate-800 cursor-pointer inline-block">Privacy Policy • Terms of Service</p>
+          </div>
+        </div>
+
       </main>
     </div>
   );

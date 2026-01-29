@@ -1,18 +1,18 @@
 import React from 'react';
 
 const steps = [
-  { id: 1, title: 'Book Demo', desc: 'Fill the form' },
-  { id: 2, title: 'Counsellor Confirmation', desc: 'We confirm details' },
-  { id: 3, title: 'Home Visit', desc: 'We come to you' },
-  { id: 4, title: 'Live Usage', desc: 'Child tries Pi Tab' },
-  { id: 5, title: 'Decide', desc: 'No pressure' },
+  { id: 1, title: 'Book Demo', desc: 'Fill the form', x: 300, y: 0 },
+  { id: 2, title: 'Counsellor Confirmation', desc: 'We confirm details', x: 540, y: 140 },
+  { id: 3, title: 'Home Visit', desc: 'We come to you', x: 440, y: 340 },
+  { id: 4, title: 'Live Usage', desc: 'Child tries Pi Tab', x: 160, y: 340 },
+  { id: 5, title: 'Decide', desc: 'No pressure', x: 60, y: 140 },
 ];
 
 export const DemoFlow: React.FC = () => {
   return (
-    <div className="py-12 border-t border-slate-200 bg-white overflow-hidden">
+    <div className="py-12 bg-white overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 relative">
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-12 text-center">How the Home Demo Works</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-16 text-center">How the Home Demo Works</h2>
         
         {/* Mobile View: Vertical List */}
         <div className="md:hidden space-y-8 relative pl-4">
@@ -33,65 +33,61 @@ export const DemoFlow: React.FC = () => {
         </div>
 
         {/* Desktop View: Pentagon Layout */}
-        <div className="hidden md:block relative w-[600px] h-[500px] mx-auto">
-             {/* SVG Connecting Line */}
-             <svg className="absolute inset-0 w-full h-full -z-10 pointer-events-none overflow-visible" viewBox="0 0 600 500">
+        <div className="hidden md:block relative w-[600px] h-[480px] mx-auto">
+             {/* SVG Connecting Lines (Arrows) */}
+             <svg className="absolute inset-0 w-full h-full -z-10 pointer-events-none overflow-visible" viewBox="0 0 600 480">
                <defs>
-                 <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                   <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                 <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+                   <polygon points="0 0, 12 4, 0 8" fill="#94a3b8" />
                  </marker>
                </defs>
 
-               {/* 1 to 2 */}
-               <path d="M330 60 Q450 60 520 160" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="6 6" markerEnd="url(#arrowhead)" />
-               {/* 2 to 3 */}
-               <path d="M550 240 Q550 350 480 430" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="6 6" markerEnd="url(#arrowhead)" />
-               {/* 3 to 4 */}
-               <path d="M420 450 L180 450" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="6 6" markerEnd="url(#arrowhead)" />
-               {/* 4 to 5 */}
-               <path d="M120 430 Q50 350 50 240" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="6 6" markerEnd="url(#arrowhead)" />
-               {/* 5 to 1 (Loop closed?) - keeping open as per linear flow, but user said pentagon. Usually flows don't loop back to start unless it's a cycle. Leaving open for A->B->C->D->E */}
+               {/* 1 -> 2 */}
+               <path 
+                 d="M335 40 Q400 60 510 130" 
+                 fill="none" stroke="#94a3b8" strokeWidth="2" markerEnd="url(#arrowhead)" 
+               />
+               
+               {/* 2 -> 3 */}
+               <path 
+                 d="M540 210 Q540 280 470 340" 
+                 fill="none" stroke="#94a3b8" strokeWidth="2" markerEnd="url(#arrowhead)" 
+               />
+
+               {/* 3 -> 4 */}
+               <path 
+                 d="M390 372 L210 372" 
+                 fill="none" stroke="#94a3b8" strokeWidth="2" markerEnd="url(#arrowhead)" 
+               />
+
+               {/* 4 -> 5 */}
+               <path 
+                 d="M130 340 Q60 280 60 210" 
+                 fill="none" stroke="#94a3b8" strokeWidth="2" markerEnd="url(#arrowhead)" 
+               />
              </svg>
 
-             {/* Items positioned absolutely to form a pentagon */}
-             
-             {/* 1. Top Center */}
-             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center w-48">
-               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-3">1</div>
-               <h4 className="font-bold text-slate-900 text-center text-lg">{steps[0].title}</h4>
-               <p className="text-sm text-slate-500 text-center">{steps[0].desc}</p>
-             </div>
-
-             {/* 2. Right Top */}
-             <div className="absolute top-[170px] -right-10 flex flex-col items-center w-48">
-               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-3">2</div>
-               <h4 className="font-bold text-slate-900 text-center text-lg">{steps[1].title}</h4>
-               <p className="text-sm text-slate-500 text-center">{steps[1].desc}</p>
-             </div>
-
-             {/* 3. Right Bottom */}
-             <div className="absolute bottom-0 right-[40px] flex flex-col items-center w-48">
-               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-3">3</div>
-               <h4 className="font-bold text-slate-900 text-center text-lg">{steps[2].title}</h4>
-               <p className="text-sm text-slate-500 text-center">{steps[2].desc}</p>
-             </div>
-
-             {/* 4. Left Bottom */}
-             <div className="absolute bottom-0 left-[40px] flex flex-col items-center w-48">
-               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-3">4</div>
-               <h4 className="font-bold text-slate-900 text-center text-lg">{steps[3].title}</h4>
-               <p className="text-sm text-slate-500 text-center">{steps[3].desc}</p>
-             </div>
-
-             {/* 5. Left Top */}
-             <div className="absolute top-[170px] -left-10 flex flex-col items-center w-48">
-               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-3">5</div>
-               <h4 className="font-bold text-slate-900 text-center text-lg">{steps[4].title}</h4>
-               <p className="text-sm text-slate-500 text-center">{steps[4].desc}</p>
-             </div>
+             {/* Render Steps */}
+             {steps.map((step) => (
+                 <div 
+                    key={step.id}
+                    className="absolute w-48 flex flex-col items-center"
+                    style={{ 
+                        left: step.x, 
+                        top: step.y,
+                        transform: 'translate(-50%, 0)'
+                    }}
+                 >
+                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-3 transition-transform hover:scale-110">
+                        {step.id}
+                   </div>
+                   <h4 className="font-bold text-slate-900 text-center text-lg leading-tight">{step.title}</h4>
+                   <p className="text-sm text-slate-500 text-center mt-1">{step.desc}</p>
+                 </div>
+             ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
            <p className="text-lg font-medium text-slate-700 italic">"A safer way to turn curiosity into understanding."</p>
         </div>
       </div>
