@@ -15,12 +15,12 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props
 }) => {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-3 border text-base font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm";
+  const baseStyles = "inline-flex items-center justify-center px-6 py-3 border text-base font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm";
   
   const variants = {
-    primary: "border-transparent text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 shadow-blue-200",
-    secondary: "border-transparent text-blue-700 bg-blue-50 hover:bg-blue-100 focus:ring-blue-500",
-    outline: "border-blue-600 text-blue-600 bg-transparent hover:bg-blue-50 focus:ring-blue-500"
+    primary: "border-transparent text-white bg-[#f97316] hover:bg-[#ea580c] focus:ring-orange-500 shadow-orange-200",
+    secondary: "border-transparent text-orange-700 bg-orange-50 hover:bg-orange-100 focus:ring-orange-500",
+    outline: "border-[#f97316] text-[#f97316] bg-transparent hover:bg-orange-50 focus:ring-orange-500"
   };
 
   const widthStyle = fullWidth ? "w-full" : "";

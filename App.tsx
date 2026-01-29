@@ -54,7 +54,7 @@ function App() {
           
           <button 
              onClick={() => document.getElementById('mobile-form')?.scrollIntoView({ behavior: 'smooth' })}
-             className="md:hidden text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full hover:bg-blue-100 transition-colors"
+             className="md:hidden text-sm font-semibold text-white bg-[#f97316] px-4 py-2 rounded-full hover:bg-[#ea580c] transition-colors"
           >
             Book Demo
           </button>
@@ -88,11 +88,11 @@ function App() {
             <LeadForm onSuccess={handleSuccess} />
             
             {/* Additional desktop-only trust signals below form */}
-            <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
+            <div className="mt-8 p-4 bg-orange-50 rounded-xl border border-orange-100 shadow-sm">
               <div className="flex items-start space-x-3">
                  <div className="flex-shrink-0">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <span className="text-blue-600 font-bold text-lg">“</span>
+                    <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                        <span className="text-[#f97316] font-bold text-lg">“</span>
                     </div>
                  </div>
                  <div>
