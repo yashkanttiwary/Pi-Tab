@@ -1,4 +1,4 @@
-export interface FormData {
+export interface LeadFormData {
   parentName: string;
   mobileNumber: string;
   city: string;

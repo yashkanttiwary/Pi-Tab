@@ -3,7 +3,7 @@ import { Input } from './ui/Input';
 import { Select } from './ui/Select';
 import { Button } from './ui/Button';
 import { TrustBadge } from './TrustBadge';
-import { FormData, FormErrors } from '../types';
+import { LeadFormData, FormErrors } from '../types';
 
 interface LeadFormProps {
   onSuccess: () => void;
@@ -11,7 +11,7 @@ interface LeadFormProps {
 }
 
 export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' }) => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<LeadFormData>({
     parentName: '',
     mobileNumber: '',
     city: '',

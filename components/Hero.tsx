@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
       setIsGenerating(true);
       setError(null);
 
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
       const prompt = `
         Professional product photography of a tablet for kids called "Pi Tab" sitting on a modern wooden desk.
@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
       });
 
       let imageFound = false;
-      if (response.candidates && response.candidates[0].content.parts) {
+      if (response.candidates && response.candidates[0].content && response.candidates[0].content.parts) {
         for (const part of response.candidates[0].content.parts) {
           if (part.inlineData) {
             const base64String = part.inlineData.data;
