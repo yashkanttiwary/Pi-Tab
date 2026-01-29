@@ -22,7 +22,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' })
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const classOptions = [
-    'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5',
+    'Class 3', 'Class 4', 'Class 5',
     'Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10'
   ];
 
