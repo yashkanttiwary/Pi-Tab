@@ -24,7 +24,7 @@ function App() {
       <div className="absolute top-[-50px] right-[-50px] w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-multiply"></div>
 
       {/* Header / Nav - Glass Effect applied via CSS class */}
-      <header className="site-header sticky top-0 z-50">
+      <header className="site-header">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 md:h-16 flex items-center justify-between">
           <div className="flex items-center logo-group">
             {/* Pi Tab Logo Part */}
@@ -62,7 +62,7 @@ function App() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 relative z-10">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-6 lg:pt-24 lg:pb-8 relative z-10">
         {/* Top Section: Hero + Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start mb-8 lg:mb-12">
           

@@ -54,9 +54,12 @@ button {
 
 /* 2. HEADER STYLES - LIQUID GLASS EFFECT */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   /* Glass effect settings */
   background: rgba(255, 255, 255, 0.4); 
   backdrop-filter: blur(20px) saturate(180%);
