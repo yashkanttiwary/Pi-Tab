@@ -18,16 +18,16 @@ const USPItem: React.FC<USPItemProps> = ({ icon, title, colorClass }) => (
 export const USPSection: React.FC = () => {
   return (
     <div className="py-2 usp-section">
-        <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-5 text-center">Why Parents Choose Pi Tab</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-5 text-center">What You’ll See in the Demo</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
-            <USPItem 
-                colorClass="bg-[#ef4444] text-white"
+             <USPItem 
+                colorClass="bg-[#10b981] text-white"
                 icon={
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
-                    </svg>
+                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                     </svg>
                 }
-                title="Distraction-Free Learning"
+                title="How Curious Junior teaches concepts step by step"
             />
             <USPItem 
                 colorClass="bg-[#3b82f6] text-white"
@@ -36,7 +36,16 @@ export const USPSection: React.FC = () => {
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                     </svg>
                 }
-                title="Instant Doubt Support"
+                title="How doubts are cleared using guided explanations"
+            />
+            <USPItem 
+                colorClass="bg-[#ef4444] text-white"
+                icon={
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                    </svg>
+                }
+                title="How PiTab keeps learning distraction-free"
             />
              <USPItem 
                 colorClass="bg-[#a855f7] text-white"
@@ -45,16 +54,7 @@ export const USPSection: React.FC = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                      </svg>
                 }
-                title="Full Parent Control"
-            />
-             <USPItem 
-                colorClass="bg-[#10b981] text-white"
-                icon={
-                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                     </svg>
-                }
-                title="Concept Clarity & Revision"
+                title="How parents can track and control usage"
             />
         </div>
     </div>
