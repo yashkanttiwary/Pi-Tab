@@ -62,10 +62,10 @@ export const Hero: React.FC = () => {
       {/* Headlines */}
       <div className="space-y-4">
         <h1 className="hero-headline text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
-          A Study-First Tab for <br/><span className="text-[#f97316]">Curious Young Learners!</span>
+          Why Parents Choose <br/><span className="text-[#f97316]">PiTab Curious Junior</span>
         </h1>
         <p className="hero-subtext text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
-          Learning without distractions. Built for CuriousJr.
+          A complete learning system - not just a tablet.
         </p>
         
         {/* Classes Accent */}
@@ -79,15 +79,15 @@ export const Hero: React.FC = () => {
       <div className="flex flex-wrap gap-y-2 gap-x-6 text-sm md:text-base font-medium text-slate-700 bg-orange-50 py-3 px-4 rounded-lg inline-flex border border-orange-100">
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-red-500 mr-2"></div>
-          Zero notifications
+          Guided learning
         </div>
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>
-          Safe parental control
+          Distraction-free device
         </div>
         <div className="flex items-center">
           <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
-          Clear concept learning
+          Parent visibility
         </div>
       </div>
 
