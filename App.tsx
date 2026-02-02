@@ -3,6 +3,7 @@ import { Hero } from './components/Hero';
 import { LeadForm } from './components/LeadForm';
 import { USPSection } from './components/USPSection';
 import { DemoFlow } from './components/DemoFlow';
+import { FeatureSection } from './components/FeatureSection';
 import { ThankYou } from './components/ThankYou';
 import { AppView } from './types';
 
@@ -102,13 +103,17 @@ function App() {
           </div>
         </div>
 
-        {/* Bottom Section: USPs, Demo Flow, Footer - Centered Layout */}
-        <div className="max-w-5xl mx-auto space-y-8 lg:space-y-12">
-          <USPSection />
-          <DemoFlow />
+        {/* Bottom Section: USPs, Demo Flow, Features, Footer */}
+        <div className="space-y-8 lg:space-y-16">
+          <div className="max-w-5xl mx-auto space-y-8 lg:space-y-12">
+            <USPSection />
+            <DemoFlow />
+          </div>
+
+          <FeatureSection />
           
           {/* Footer Area */}
-          <div className="site-footer pt-6 pb-6 border-t border-slate-100 text-sm text-slate-500 text-center">
+          <div className="site-footer pt-6 pb-6 border-t border-slate-100 text-sm text-slate-500 text-center max-w-5xl mx-auto">
              <p>&copy; {new Date().getFullYear()} Pi Tab + CuriousJr. All rights reserved.</p>
              <p className="mt-2">
                <span className="footer-link cursor-pointer">Privacy Policy</span> • <span className="footer-link cursor-pointer">Terms of Service</span>
