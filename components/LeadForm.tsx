@@ -88,7 +88,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' })
     <div className={`lead-form-card bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-8 ${className}`}>
       <div className="mb-6 text-center">
         <h3 className="text-2xl font-bold text-slate-900">PiTab Curious Junior – Home Demo</h3>
-        <p className="text-slate-600 text-sm mt-2">Experience how learning works on PiTab Curious Junior, at home.</p>
+        <p className="text-slate-600 text-sm mt-2">Experience how learning works on PiTab Curious Junior, <br /> at home.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
