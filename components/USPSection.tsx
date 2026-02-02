@@ -7,8 +7,8 @@ interface USPItemProps {
 }
 
 const USPItem: React.FC<USPItemProps> = ({ icon, title, colorClass }) => (
-  <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow h-full">
-    <div className={`w-10 h-10 flex-shrink-0 ${colorClass} rounded-lg flex items-center justify-center shadow-sm`}>
+  <div className="usp-card bg-white p-3 rounded-xl border border-slate-100 shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow h-full">
+    <div className={`usp-icon-box w-10 h-10 flex-shrink-0 ${colorClass} rounded-lg flex items-center justify-center shadow-sm`}>
       {icon}
     </div>
     <h3 className="text-sm md:text-base font-bold text-slate-900 leading-tight text-left">{title}</h3>
@@ -17,7 +17,7 @@ const USPItem: React.FC<USPItemProps> = ({ icon, title, colorClass }) => (
 
 export const USPSection: React.FC = () => {
   return (
-    <div className="py-2">
+    <div className="py-2 usp-section">
         <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-5 text-center">Why Parents Choose Pi Tab</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
             <USPItem 

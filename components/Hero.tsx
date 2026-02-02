@@ -58,20 +58,20 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6 md:space-y-8">
+    <div className="hero-section space-y-6 md:space-y-8">
       {/* Headlines */}
       <div className="space-y-4">
-        <h1 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
+        <h1 className="hero-headline text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
           A Study-First Tab for <br/><span className="text-[#f97316]">Curious Young Learners!</span>
         </h1>
-        <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
+        <p className="hero-subtext text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
           Learning without distractions. Built for CuriousJr.
         </p>
         
         {/* Classes Accent */}
         <div className="inline-block relative">
             <span className="text-slate-900 font-bold text-lg relative z-10">For classes 3rd to 10th</span>
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-[#f97316] rounded-full transform -rotate-1"></div>
+            <div className="hero-accent-underline absolute bottom-0 left-0 w-full h-1 bg-[#f97316] rounded-full transform -rotate-1"></div>
         </div>
       </div>
 

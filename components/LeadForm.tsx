@@ -85,7 +85,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' })
   };
 
   return (
-    <div className={`bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-8 ${className}`}>
+    <div className={`lead-form-card bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-8 ${className}`}>
       <div className="mb-6 text-center">
         <h3 className="text-2xl font-bold text-slate-900">Book a Free Home Demo</h3>
         <p className="text-slate-600 text-sm mt-2">See Pi Tab in action at your home</p>
@@ -100,6 +100,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' })
           onChange={handleChange}
           error={errors.parentName}
           autoComplete="name"
+          className="form-input-field"
         />
 
         <Input
@@ -113,6 +114,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' })
           maxLength={15}
           autoComplete="tel"
           inputMode="tel"
+          className="form-input-field"
         />
 
         <Input
@@ -123,6 +125,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' })
           onChange={handleChange}
           error={errors.city}
           autoComplete="address-level2"
+          className="form-input-field"
         />
 
         <Select
@@ -133,6 +136,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' })
           onChange={handleChange}
           error={errors.childClass}
           placeholder="Select Class"
+          className="form-input-field"
         />
 
         <div className="pt-2">

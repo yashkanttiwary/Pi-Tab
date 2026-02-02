@@ -1,0 +1,204 @@
+/* 
+   ================================================================
+   PI TAB + CURIOUSJR - GLOBAL STYLESHEET
+   ================================================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary-color: #f97316; /* Orange-500 */
+  --primary-hover: #ea580c; /* Orange-600 */
+  --blue-brand: #2563eb;    /* Blue-600 */
+  --blue-light: #eff6ff;    /* Blue-50 */
+  
+  /* Neutrals */
+  --bg-body: #ffffff;
+  --bg-secondary: #f8fafc;  /* Slate-50 */
+  --text-main: #0f172a;     /* Slate-900 */
+  --text-body: #334155;     /* Slate-700 */
+  --text-muted: #64748b;    /* Slate-500 */
+  --border-color: #e2e8f0;  /* Slate-200 */
+  
+  /* Spacing & Layout */
+  --container-max: 1280px;
+  --header-height: 64px;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* 1. GLOBAL RESET & BASE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 2. HEADER STYLES - LIQUID GLASS EFFECT */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Glass effect settings */
+  background: rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  height: var(--header-height);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.03);
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Pi Tab Logo Typography */
+.brand-pi {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.05em;
+  color: var(--text-main);
+}
+
+.logo-divider {
+  height: 24px;
+  width: 1px;
+  background: #cbd5e1;
+  margin: 0 16px;
+}
+
+/* 3. HERO SECTION */
+.hero-section {
+  position: relative;
+}
+
+.hero-headline {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-main);
+}
+
+.hero-subtext {
+  font-size: 1.125rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.hero-accent-underline {
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 4px;
+  transform: rotate(-1deg);
+  opacity: 0.9;
+}
+
+/* 4. LEAD FORM CARD */
+.lead-form-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lead-form-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+.form-input-field {
+  transition: all 0.2s ease;
+}
+
+.form-input-field:focus {
+  transform: translateY(-1px);
+}
+
+/* 5. USP CARDS */
+.usp-section {
+  position: relative;
+}
+
+.usp-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.usp-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.usp-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* 6. DEMO FLOW */
+.demo-flow-section {
+  background: radial-gradient(circle at center, #f8fafc 0%, #ffffff 70%);
+}
+
+.flow-step-circle {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 4px solid white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.flow-step-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* 7. ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* 8. FOOTER */
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.footer-link {
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}

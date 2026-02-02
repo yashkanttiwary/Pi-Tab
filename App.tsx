@@ -18,24 +18,25 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header / Nav */}
-      <header className="bg-white border-b border-slate-100 sticky top-0 z-50">
+    <div className="min-h-screen bg-white relative overflow-x-hidden">
+      {/* Liquid Background Blobs for Glass Effect */}
+      <div className="absolute top-[-100px] left-[-100px] w-[600px] h-[600px] bg-orange-300/30 rounded-full blur-[120px] pointer-events-none z-0 mix-blend-multiply animate-pulse"></div>
+      <div className="absolute top-[-50px] right-[-50px] w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-multiply"></div>
+
+      {/* Header / Nav - Glass Effect applied via CSS class */}
+      <header className="site-header sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 md:h-16 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center logo-group">
             {/* Pi Tab Logo Part */}
-            <div className="flex items-center gap-1 mr-3">
+            <div className="flex items-center gap-1 mr-3 brand-pi">
               <span className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tighter leading-none pb-1 font-sans">pi</span>
-              <span className="bg-[#0f172a] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-[4px] tracking-wider uppercase border border-slate-700 leading-none">
-                TAB
-              </span>
             </div>
             
             {/* Divider */}
-            <div className="h-6 w-px bg-slate-300 mx-2"></div>
+            <div className="logo-divider h-6 w-px bg-slate-300 mx-2"></div>
             
             {/* CuriousJr Logo Part */}
-            <div className="flex items-center">
+            <div className="flex items-center brand-curious">
               <span className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight leading-none">Curious</span>
               <span className="text-xl md:text-2xl font-bold text-[#f97316] tracking-tight leading-none">Jr</span>
             </div>
@@ -61,7 +62,7 @@ function App() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 relative z-10">
         {/* Top Section: Hero + Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start mb-8 lg:mb-12">
           
@@ -107,9 +108,11 @@ function App() {
           <DemoFlow />
           
           {/* Footer Area */}
-          <div className="pt-6 border-t border-slate-100 text-sm text-slate-500 text-center">
+          <div className="site-footer pt-6 pb-6 border-t border-slate-100 text-sm text-slate-500 text-center">
              <p>&copy; {new Date().getFullYear()} Pi Tab + CuriousJr. All rights reserved.</p>
-             <p className="mt-2 hover:text-slate-800 cursor-pointer inline-block">Privacy Policy • Terms of Service</p>
+             <p className="mt-2">
+               <span className="footer-link cursor-pointer">Privacy Policy</span> • <span className="footer-link cursor-pointer">Terms of Service</span>
+             </p>
           </div>
         </div>
 

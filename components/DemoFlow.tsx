@@ -10,7 +10,7 @@ const steps = [
 
 export const DemoFlow: React.FC = () => {
   return (
-    <div className="py-4 bg-white overflow-hidden">
+    <div className="py-4 bg-white overflow-hidden demo-flow-section">
       <div className="max-w-4xl mx-auto px-4 relative">
         <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-8 text-center">How the Home Demo Works</h2>
         
@@ -21,7 +21,7 @@ export const DemoFlow: React.FC = () => {
            
            {steps.map((step) => (
              <div key={step.id} className="flex items-start">
-               <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-4 border-white z-10">
+               <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-4 border-white z-10 flow-step-circle">
                  {step.id}
                </div>
                <div className="ml-4 pt-1">
@@ -78,7 +78,7 @@ export const DemoFlow: React.FC = () => {
                         transform: 'translate(-50%, 0)'
                     }}
                  >
-                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-2 transition-transform hover:scale-110">
+                   <div className="flow-step-circle w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg border-4 border-white z-10 mb-2 transition-transform hover:scale-110">
                         {step.id}
                    </div>
                    <h4 className="font-bold text-slate-900 text-center text-base leading-tight">{step.title}</h4>
