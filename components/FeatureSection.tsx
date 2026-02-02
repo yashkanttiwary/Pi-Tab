@@ -8,7 +8,7 @@ export const FeatureSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            More Than Just a Tablet
+            Why Parents Choose PiTab Curious Junior
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             Includes the Curious Jr learning program, ready from Day One, no extra setup, no additional apps.
@@ -23,7 +23,7 @@ export const FeatureSection: React.FC = () => {
             <div className="flex-1 text-left order-2 md:order-1">
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Interactive Live Classes</h3>
               <p className="text-slate-600 leading-relaxed">
-                Small-group live classes with engaging visuals, animations, and rewards, designed to keep children attentive and excited to learn.
+                Small-group live classes with engaging visuals and animations that help children stay attentive and actively participate.
               </p>
             </div>
             <div className="w-full md:w-2/5 flex justify-center order-1 md:order-2">
@@ -41,40 +41,40 @@ export const FeatureSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Real-Time Homework Assistance</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              No more daily homework struggles. Children get guided support from mentors, while parents enjoy stress-free evenings.
+              Guided homework support that helps children solve doubts step by step — while parents enjoy stress-free evenings.
             </p>
           </div>
 
-          {/* Card 3: The Two-Teacher Model (Standard, Green) */}
+          {/* Card 3: Concept-Based Learning & Revision (Standard, Green) */}
           <div className="md:col-span-1 bg-[#F0FDF4] rounded-3xl p-8 flex flex-col items-center text-center border border-green-100 transition-transform hover:-translate-y-1 duration-300">
              <div className="w-full aspect-[4/3] mb-6 bg-green-200/40 rounded-2xl flex items-center justify-center text-green-500">
-               <span className="text-7xl">👩‍🏫</span>
+               <span className="text-7xl">🧠</span>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">The Two-Teacher Model</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Concept-Based Learning & Revision</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              One expert educator for concept clarity and one dedicated mentor to personally guide your child's learning journey.
+              Recorded lessons, visual explanations, and practice support designed to build strong understanding — not rote learning.
             </p>
           </div>
 
-          {/* Card 4: Tailored Practice Solutions (Standard, Blue) */}
+          {/* Card 4: Distraction-Free Learning Environment (Standard, Blue) */}
           <div className="md:col-span-1 bg-[#EFF6FF] rounded-3xl p-8 flex flex-col items-center text-center border border-blue-100 transition-transform hover:-translate-y-1 duration-300">
              <div className="w-full aspect-[4/3] mb-6 bg-blue-200/40 rounded-2xl flex items-center justify-center text-blue-500">
-               <span className="text-7xl">📝</span>
+               <span className="text-7xl">🎯</span>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Tailored Practice Solutions</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Distraction-Free Learning Environment</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Smart practice exercises designed to strengthen concepts and adapt to your child's learning pace.
+              A study-only device with zero notifications and no entertainment apps, so learning stays focused every day.
             </p>
           </div>
 
-          {/* Card 5: Daily Performance Tracking (Standard, Yellow) */}
+          {/* Card 5: Parent Control & Learning Visibility (Standard, Yellow) */}
           <div className="md:col-span-1 bg-[#FEFCE8] rounded-3xl p-8 flex flex-col items-center text-center border border-yellow-100 transition-transform hover:-translate-y-1 duration-300">
              <div className="w-full aspect-[4/3] mb-6 bg-yellow-200/40 rounded-2xl flex items-center justify-center text-yellow-500">
-               <span className="text-7xl">📊</span>
+               <span className="text-7xl">🛡️</span>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Daily Performance Tracking</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Parent Control & Learning Visibility</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Clear progress reports to track Child's daily learning.
+              Set screen limits, control app access, and track learning progress — all with simple parent controls.
             </p>
           </div>
 
